@@ -1,6 +1,6 @@
 Welcome in my Microsoft Excel related project repo, where I am sharing some stuffs which can be useful or interesting for you.
 
-Most of the codes here are inspired by [The CodingTrain Youtube channel] (https://www.youtube.com/thecodingtrain/), which is a really good starting point to make programming interesting in funny and easy to understand way.
+Most of the codes here are inspired by [The CodingTrain Youtube channel](https://www.youtube.com/thecodingtrain/), which is a really good starting point to make programming interesting in funny and easy to understand way.
 
 Other codes were created to make my work easier. 
 
