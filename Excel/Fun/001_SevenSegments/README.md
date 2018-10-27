@@ -26,5 +26,5 @@ I have created few procedures to separate the main tasks of the program:
    It just removes from the sheet those shapes which was created by the SetupDisplay.
 
 ## Variation
-1. If we replace more displays next to each other we can display even a running text.
+1. If we have more displays next to each other then we can display even a running text.
 2. On 7-segments we cannot display any charcters (like K, Z, M), but there are 9 or 14 or 16-segments displays.
