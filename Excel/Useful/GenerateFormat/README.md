@@ -10,17 +10,15 @@ SQL requires to have a comma between all values and strings must be between apos
 
 First select a column or range and run the macro to open the user form, where you can
  - set which format should be created
-   1. SQL will generate an output like this:
+   1. By default SQL will generate an output like this:
    ```'Abkhazia',
       'Afghanistan',
       'Albania',
       '1234', ...
    ```
-   2. BO will generate an output like this:
-   ```'Abkhazia',
-      'Afghanistan',
-      'Albania',
-      '0000001234', ...
+   2. and BO like this:
+   ```
+    'Abkhazia';'Afghanistan';'Albania';'0000001234'; ...         
   - pad number to a left with any given character
   - trim extra spaces and remove leading zeroes from numbers during converting.
 
