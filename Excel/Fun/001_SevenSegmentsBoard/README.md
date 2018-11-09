@@ -10,6 +10,9 @@ You can download the
 We would like to display more letters at the same time, so we need more seven segment displays. To make it fun let's animate the text; it will run from right to left.
 Let's try to display all kind of characters, not just numbers and letters from A to G. However there is a limitation, because some letters (like Q, K, Z or M) cannot be shown on a seven segment display.
 
+![Board](https://github.com/viszi/codes/blob/master/Excel/Fun/001_SevenSegmentsBoard/images/001_Board.png)
+
+
 ## How it works?
 It is really similar to the seven segment display code - I am just highlighting the major differences.
 1. SetupBoard
