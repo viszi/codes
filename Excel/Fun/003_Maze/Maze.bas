@@ -203,7 +203,7 @@ Sub Setup(sheet As String, row As Long, column As Long)
     End With
 
     'make cells square: height is in points (1/72 of an inch), height is in pixels
-    Columns("D").Resize(, column).ColumnWidth = 2.43
+    Columns("B").Resize(, column).ColumnWidth = 2.43
     Rows("2").Resize(row).RowHeight = 17
     
     Application.ScreenUpdating = True
