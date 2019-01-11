@@ -10,7 +10,7 @@ With this macro you can export data into a flat file (text file), where
 
 **Screenshot of the userform**
 
-![Form screen](https://github.com/viszi/codes/blob/master/Excel/Useful/Export2CSV/images/001_From.png)
+![Form screen](https://github.com/viszi/codes/blob/master/Excel/Useful/Export2CSV/images/002_From.png)
 
 Enjoy it!
 
