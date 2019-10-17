@@ -13,6 +13,7 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+
 Option Explicit
 Dim rngAdatok As Range
 Dim AllowEvents As Boolean
@@ -46,7 +47,14 @@ Private Sub UserForm_Initialize()
     'Load the saved/default settings
     Defaults
 
-    txRows = Format(txRows.Value, "### ### ###")
+    Select Case Application.DecimalSeparator
+    Case ","
+        txRows = Format(txRows.Value, "###,###,###")
+    Case " "
+        txRows = Format(txRows.Value, "### ### ###")
+    Case Else
+        txRows = Format(txRows.Value, "#########")
+    End Select
 
     If Len(ActiveSheet.UsedRange.Address) > 0 Then
         Me.opRegion3.Value = 1
