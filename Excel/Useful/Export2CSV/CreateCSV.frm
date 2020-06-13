@@ -13,8 +13,8 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
-
 Option Explicit
+
 Dim rngAdatok As Range
 Dim AllowEvents As Boolean
 Const myApps = "CreateMyCSV"
@@ -220,18 +220,6 @@ Private Sub UnicodeSave()
 
 End Sub
 
-Private Sub cbSeparator_Change()
-
-'    If Not Validate Then btExport.Enabled = False
-
-End Sub
-
-Private Sub cbTextQualifier_Change()
-
-'    If Not Validate Then btExport.Enabled = False
-
-End Sub
-
 Private Sub opRegion1_Click()
     On Error GoTo Hiba
     Set rngAdatok = Application.InputBox("Select range to export", "Selection", Type:=8)
@@ -285,13 +273,19 @@ End Sub
 
 Private Sub SelectFile()
     Dim fd As Object
+    Dim ext As String
+    Dim i As Long
 
     Set fd = Application.FileDialog(msoFileDialogSaveAs)
+    
+    ext = "*.csv"
+    
     With fd
         .AllowMultiSelect = False
         .Title = "Select a location and filename"
+        .FilterIndex = 5        'use CSV
         .ButtonName = "&Save As"
-        .InitialFileName = "GKAccounts"
+        .InitialFileName = Left(ThisWorkbook.Name, InStr(1, ThisWorkbook.Name, ".")) & "csv"
         .Show
         On Error GoTo Hiba
         txFile = .SelectedItems(1)
@@ -299,7 +293,7 @@ Private Sub SelectFile()
     Exit Sub
 
 Hiba:
-    txFile = "c:\Test\test.csv"
+    txFile = Application.DefaultFilePath & "\export.csv"
 
 End Sub
 
@@ -324,7 +318,7 @@ Private Sub Defaults()
     chLimit = GetSetting(myApps, "Defaults", "UseLines", False)
     chTrim = GetSetting(myApps, "Defaults", "Trim", False)
     chValue = GetSetting(myApps, "Defaults", "Value", False)
-    txFile = GetSetting(myApps, "Defaults", "File", "C:\Temp\test.csv")
+    txFile = GetSetting(myApps, "Defaults", "File", Application.DefaultFilePath & "\export.csv")
     chBreak = GetSetting(myApps, "Defaults", "Breaks", False)
     txBreaks = GetSetting(myApps, "Defaults", "NewLines", "1")
 
